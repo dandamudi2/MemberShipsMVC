@@ -37,9 +37,16 @@ namespace MemberShipWebsite.Entities
                   HTML : HTML.Substring(0, 50);
             }
         }
+        [DisplayName("Product")]
         public int ProductId { get; set; }
+
+        [DisplayName("Item Types")]
         public int ItemTypeId { get; set; }
+
+        [DisplayName("Sections")]
         public int SectionId { get; set; }
+
+        [DisplayName("Part")]
         public int PartId { get; set; }
         public bool IsFree { get; set; }
         [DisplayName("Item Types")]

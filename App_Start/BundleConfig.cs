@@ -24,7 +24,8 @@ namespace MemberShipWebsite
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/font-awesome.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/admin").Include(
                     "~/Scripts/AdminMenu.js"));

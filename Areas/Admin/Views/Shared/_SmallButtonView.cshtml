@@ -1,0 +1,6 @@
+﻿@model  MemberShipWebsite.Areas.Models.SmallButtonModel
+
+<a href="@Url.Action(Model.Action)@Model.ActionParameters" class="btn @Model.ButtonType" >
+    <span class="fa fa-@Model.icon"> @Model.Text </span>
+    
+</a>

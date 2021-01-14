@@ -54,7 +54,9 @@ namespace MemberShipWebsite.Models
         public DbSet<SubscriptionProduct> SubscriptionProducts { get; set; }
 
         public DbSet<UserSubscription> UserSubscriptions { get; set; }
-        
 
+        public DbSet<ProductLinkText> ProductLinkTexts { get; set; }
+
+      
     }
 }
