@@ -1,0 +1,37 @@
+﻿@model  MemberShipWebsite.Areas.Admin.Models.ProductItemModel
+@using MemberShipWebsite.Areas.Models
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h4>Product Item Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductTitle)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.Partial("_EditButtonDetailsPartial",new  EditButtonModel
+    {
+       ItemId = Model.ItemId,
+       ProductId = Model.ProductId
+
+    })
+    @Html.Partial("_BackToListButtonPartial")
+</p>
+
+

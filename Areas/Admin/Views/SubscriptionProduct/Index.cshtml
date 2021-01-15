@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MemberShipWebsite.Areas.Admin.Models.SubscriptionProductModel>
+@using MemberShipWebsite.Areas.Models
+<p>
+    @Html.Partial("_CreateButtonPartial")
+</p>
+<table class="table table-striped table-bordered" >
+    <tr>
+        <th>Product Title</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor( m=>item.ProductTitle)
+        </td>
+        @Html.Partial("_TableButtonView",new SmallButtonModel
+       {
+          ProductId = item.ProductId,
+          SubscriptionId = item.SubscriptionId
+       })
+    </tr>
+}
+
+</table>

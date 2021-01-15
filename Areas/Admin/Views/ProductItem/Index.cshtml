@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MemberShipWebsite.Areas.Admin.Models.ProductItemModel>
+@using MemberShipWebsite.Areas.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.Partial("_CreateButtonPartial")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ProductTitle)</th>
+        <th>@Html.DisplayNameFor(model => model.ItemTitle)</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelitem => item.ProductTitle) </td>
+            <td>@Html.DisplayFor(modelitem => item.ItemTitle) </td>
+           
+            @Html.Partial("_TableButtonView", new SmallButtonModel
+           {
+               ItemId = item.ItemId,
+               ProductId = item.ProductId
+           })
+           
+        </tr>
+    }
+
+</table>
